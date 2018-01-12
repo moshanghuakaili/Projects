@@ -1,0 +1,224 @@
+# Number of activities 
+activity_no=7
+dummy_activity_no=2
+# Activity durations
+activity_d=[0,3,3,1,2,2,3,3,0]
+
+
+activity_c=[0,-200,-450,120,170,-200,130,-40,0]
+
+#Number of resources used per activity 
+activity_r=[0,2,3,2,3,4,2,1,0]
+
+# Maximal number of successors and predecessors 
+max_su_pre=4
+
+# Discount rate a (in %) 
+alpha=0.01
+
+
+# Deadline of the project 
+deadline=12
+
+# Activity resource demand 
+resource=5
+data1=[
+	{
+		"no":1,
+		"d":0,
+		"c":0,
+		"predecessors":[],
+		"successors":[2,3,4]
+	},
+	{
+		"no":2,
+		"d":1,
+		"c":-100,
+		"predecessors":[1],
+		"successors":[7]
+	},
+	{
+		"no":3,
+		"d":4,
+		"c":-150,
+		"predecessors":[1],
+		"successors":[5,7]
+	},
+	{
+		"no":4,
+		"d":7,
+		"c":50,
+		"predecessors":[1],
+		"successors":[5,8]
+	},
+	{
+		"no":5,
+		"d":1,
+		"c":50,
+		"predecessors":[3,4],
+		"successors":[6]
+	},
+	{
+		"no":6,
+		"d":1,
+		"c":-25,
+		"predecessors":[5],
+		"successors":[8]
+	},
+	{
+		"no":7,
+		"d":6,
+		"c":200,
+		"predecessors":[2,3],
+		"successors":[8]
+	},
+	{
+		"no":8,
+		"d":2,
+		"c":30,
+		"predecessors":[4,6,7],
+		"successors":[9]
+	},
+	{
+		"no":9,
+		"d":0,
+		"c":0,
+		"predecessors":[8],
+		"successors":[]
+	},
+	
+]
+data2=[
+	{
+		"no":1,
+		"d":0,
+		"c":0,
+		"predecessors":[],
+		"successors":[2,3]
+	},
+	{
+		"no":2,
+		"d":2,
+		"c":-10,
+		"predecessors":[1],
+		"successors":[4]
+	},
+	{
+		"no":3,
+		"d":1,
+		"c":-10,
+		"predecessors":[1],
+		"successors":[4]
+	},
+	{
+		"no":4,
+		"d":1,
+		"c":-10,
+		"predecessors":[2,3],
+		"successors":[6]
+	},
+	{
+		"no":5,
+		"d":4,
+		"c":-10,
+		"predecessors":[3],
+		"successors":[8]
+	},
+	{
+		"no":6,
+		"d":1,
+		"c":-10,
+		"predecessors":[4],
+		"successors":[7]
+	},
+	{
+		"no":7,
+		"d":1,
+		"c":5,
+		"predecessors":[6],
+		"successors":[8]
+	},
+	{
+		"no":8,
+		"d":0,
+		"c":0,
+		"predecessors":[5,7],
+		"successors":{}
+	},
+	
+]
+
+data=[
+	{
+		"no":1,
+		"d":0,
+		"c":0,
+		"r":0,
+		"predecessors":[],
+		"successors":[2,3,8]
+	},
+	{
+		"no":2,
+		"d":3,
+		"c":-200,
+		"r":2,
+		"predecessors":[1],
+		"successors":[5]
+	},
+	{
+		"no":3,
+		"d":3,
+		"c":-450,
+		"r":3,
+		"predecessors":[1],
+		"successors":[4,6]
+	},
+	{
+		"no":4,
+		"d":1,
+		"c":120,
+		"r":2,
+		"predecessors":[3],
+		"successors":[5]
+	},
+	{
+		"no":5,
+		"d":2,
+		"c":170,
+		"r":3,
+		"predecessors":[2,4],
+		"successors":[9]
+	},
+	{
+		"no":6,
+		"d":2,
+		"c":-200,
+		"r":4,
+		"predecessors":[3],
+		"successors":[7]
+	},
+	{
+		"no":7,
+		"d":3,
+		"c":130,
+		"r":2,
+		"predecessors":[6],
+		"successors":[9]
+	},
+	{
+		"no":8,
+		"d":3,
+		"c":-40,
+		"r":1,
+		"predecessors":[1],
+		"successors":[9]
+	},
+	{
+		"no":9,
+		"d":0,
+		"c":0,
+		"r":0,
+		"predecessors":[5,7,8],
+		"successors":[]
+	}
+]
